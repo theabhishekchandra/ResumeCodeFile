@@ -146,7 +146,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Kotlin, Java, XML} \\
-     \textbf{Developer Tools}{: Android Studio, VS Code, Google Cloud Platform, Azure DevOps }\\
+     \textbf{Developer Tools}{: Android Studio, VS Code, Azure DevOps }\\
      \textbf{Technologies/Frameworks}{: Git, GitHub, GitLab, JUnit, CI/CD, MVVM, MVP, MVI, Firebase, Retrofit, Dagger/Hilt, Coroutines, Glide/Picasso, Data/View Binding } \\
     }}
  \end{itemize}
@@ -179,7 +179,7 @@
       {Gram Unnati Foundation}{Jun 2024 -- Present}
       {Junior Android Developer}{Gurugram, Haryana}
       \resumeItemListStart
-      \resumeItem{\textbf{Scheduled Image Upload:} Implemented a feature to schedule image uploads during low network connectivity using \textbf{WorkManager} and \textbf{Network Connectivity Management}, ensuring efficient and reliable data synchronization.}
+      \resumeItem{\textbf{Scheduled Image Upload:} Implemented a feature to schedule image uploads during low network connectivity using \textbf{WorkManager} and \textbf{ConnectivityManager}, ensuring efficient and reliable data synchronization.}
         \resumeItem{\textbf{Info Help Video Integration: }Designed and implemented an in-app video tutorial feature using \textbf{Kotlin }and \textbf{Material Design}, enhancing user support and onboarding experience.
  }
         \resumeItem{\textbf{Multi-Language Support:} Developed localized app functionality with \textbf{Java} and \textbf{Android Resources}, enabling seamless user experiences in English and Hindi.}
