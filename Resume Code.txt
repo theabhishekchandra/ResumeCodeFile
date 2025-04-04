@@ -1,8 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
+% Author : Abhishek Chandra (based on Jake Gutierrez template)
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -36,12 +34,20 @@
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
 
-
+\usepackage{xcolor} % Make sure this is in your preamble
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+
+% Define brand colors
+\definecolor{gmailred}{HTML}{D44638}
+\definecolor{phonegreen}{HTML}{008000}
+\definecolor{linkedinblue}{HTML}{0A66C2}
+\definecolor{githubblack}{HTML}{171515}
+\definecolor{primary}{HTML}{169e1d}    % Project Heading
+\definecolor{accent}{HTML}{ed1c1c}     % Link red or attention color
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.6in}
@@ -122,13 +128,18 @@
 %   \href{http://test.com/}{http://www.test.com} & Mobile : +1-123-456-7890 \\
 % \end{tabular*}
 
+
+
 \begin{center}
     {\Huge \scshape Abhishek Chandra} \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\faPhone\ 8576839351 ~ \href{mailto:ac927920@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{ac927920@gmail.com}} ~ 
-    \href{https://www.linkedin.com/in/theabhishekchandra/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/theabhishekchandra}}  ~
-    \href{https://github.com/theabhishekchandra}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/theabhishekchandra}}
+    \small 
+    \textcolor{phonegreen}{\faPhone ~ 8576839351} ~
+    \href{mailto:ac927920@gmail.com}{\textcolor{gmailred}{\faEnvelope~ac927920@gmail.com}} ~
+    \href{https://www.linkedin.com/in/theabhishekchandra/}{\textcolor{linkedinblue}{\faLinkedin~linkedin.com/in/theabhishekchandra}} ~
+    \href{https://github.com/theabhishekchandra}{\textcolor{githubblack}{\faGithub~github.com/theabhishekchandra}} 
     \vspace{-13pt}
 \end{center}
+
 
 
 %-----------EDUCATION-----------
@@ -145,10 +156,9 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Kotlin, Java, XML} \\
+     \textbf{Languages}{: Kotlin, Java, XML, Jetpack Compose} \\
      \textbf{Developer Tools}{: Android Studio, VS Code, Azure DevOps }\\
-     \textbf{Technologies/Frameworks}{: Git, GitHub, GitLab, JUnit, CI/CD, MVVM, MVP, MVI, Firebase, Retrofit, Dagger/Hilt, Coroutines, Glide/Picasso, Data/View Binding } \\
-    }}
+     \textbf{Technologies/Frameworks}{: Data / View Binding, Glide / Pisso, Room Database, SQLite, Firebase, Retrofit / OkHttp / Volley, Dagger / Hilt, Coroutines, MVVM, MVP, MVI, Git, GitHub, JUnit, Espresso, CI/CD} }}
  \end{itemize}
  \vspace{-20pt}
 
@@ -179,38 +189,35 @@
       {Gram Unnati Foundation}{Jun 2024 -- Present}
       {Junior Android Developer}{Gurugram, Haryana}
       \resumeItemListStart
-      \resumeItem{\textbf{Scheduled Image Upload:} Implemented a feature to schedule image uploads during low network connectivity using \textbf{WorkManager} and \textbf{ConnectivityManager}, ensuring efficient and reliable data synchronization.}
-        \resumeItem{\textbf{Info Help Video Integration: }Designed and implemented an in-app video tutorial feature using \textbf{Kotlin }and \textbf{Material Design}, enhancing user support and onboarding experience.
- }
-        \resumeItem{\textbf{Multi-Language Support:} Developed localized app functionality with \textbf{Java} and \textbf{Android Resources}, enabling seamless user experiences in English and Hindi.}
-        \resumeItem{\textbf{Invoice Generation:} Built a PDF generation feature using \textbf{PDF Generator Library}, streamlining invoice creation and documentation processes.}
+        \resumeItem{\textbf{Scheduled Image Upload:} Engineered an automated image upload mechanism leveraging \textbf{WorkManager} and \textbf{ConnectivityManager} to ensure reliable data synchronization during low network conditions.}
+        \resumeItem{\textbf{In-App Video Tutorials:} Developed a user-friendly onboarding experience by integrating video tutorials using \textbf{Kotlin} and \textbf{Material Design}, enhancing user engagement and support.}
+        \resumeItem{\textbf{Multi-Language Support:} Implemented \textbf{Android Resources} and \textbf{Locale API} to enable seamless app localization, supporting English and Hindi.}
+        \resumeItem{\textbf{Invoice Generation:} Designed and developed a dynamic PDF generation feature using the \textbf{PDF Generator Library}, improving efficiency in documentation and invoicing processes.}
       \resumeItemListEnd
-      \vspace{-2pt}
 
     \resumeSubheading
       {Gram Unnati Foundation}{Mar 2024 -- Jun 2024}
       {Android Developer Intern}{Gurugram, Haryana}
       \resumeItemListStart
-        \resumeItem{\textbf{Firebase Authentication Integration:} Integrated \textbf{Firebase Authentication} with phone number verification to enable secure user login and registration. }
-        \resumeItem{\textbf{Enhanced Camera Functionality:} Improved mobile camera features with auto-focus, \textbf{watermarking}, and image processing techniques, enhancing the overall user experience.}
-        \resumeItem{\textbf{Push Notifications:} Implemented\textbf{ Firebase Cloud Messaging (FCM)} to deliver push notifications, ensuring reliable communication and increased user engagement.}
-        % \resumeItem{\textbf{Dark Mode Optimization:} Developed and optimized the UI to resolve compatibility issues with \textbf{Dark Mode}, ensuring a seamless visual experience across themes.}
+        \resumeItem{\textbf{Firebase Authentication:} Integrated \textbf{Firebase Authentication} with OTP-based phone number verification to enhance user security and authentication reliability.}
+        \resumeItem{\textbf{Advanced Camera Functionality:} Optimized in-app camera features by implementing \textbf{auto-focus}, \textbf{watermarking}, and \textbf{real-time image processing} to enhance user experience.}
+        \resumeItem{\textbf{Push Notifications:} Configured \textbf{Firebase Cloud Messaging (FCM)} to deliver targeted push notifications, improving user retention and app engagement.}
       \resumeItemListEnd
-\resumeSubheading
-      {Websbaba Technologies Pvt.Ltd.}{Oct 2023 -- Mar 2024}
+
+    \resumeSubheading
+      {Websbaba Technologies Pvt. Ltd.}{Oct 2023 -- Mar 2024}
       {Android Developer}{Gurugram, Haryana}
       \resumeItemListStart
-        \resumeItem{\textbf{Performance Optimization:} Optimized app performance by fixing bugs and ensuring device compatibility.}
-        \resumeItem{\textbf{End-to-end Development:} Designed, developed, and deployed Android apps aligned with user needs and business.}
+        \resumeItem{\textbf{App Performance Optimization:} Diagnosed and resolved performance bottlenecks using \textbf{Android Profiler}, optimizing memory usage and ensuring smooth app operation across devices.}
+        \resumeItem{\textbf{Full-Stack Android Development:} Led the design, development, and deployment of Android applications aligned with business requirements and user needs.}
       \resumeItemListEnd
-\resumeSubheading
-      {Websbaba Technologies Pvt.Ltd.}{Jul 2023 -- Aug 2023}
+
+    \resumeSubheading
+      {Websbaba Technologies Pvt. Ltd.}{Jul 2023 -- Aug 2023}
       {Android Developer Intern}{Gurugram, Haryana}
       \resumeItemListStart
-        \resumeItem{Developed and optimized Android app features using \textbf{Java} and Material Design.}
-        \resumeItem{Improved performance, fixed bugs, and ensured timely delivery.}
-        % \resumeItem{\textbf{Push Notifications:} Implemented\textbf{ Firebase Cloud Messaging (FCM)} to deliver push notifications, ensuring reliable communication and increased user engagement.}
-        % \resumeItem{\textbf{Dark Mode Optimization:} Developed and optimized the UI to resolve compatibility issues with \textbf{Dark Mode}, ensuring a seamless visual experience across themes.}
+        \resumeItem{\textbf{Feature Development:} Engineered Android app features using \textbf{Java} and \textbf{Material Design}, enhancing UI/UX experience and application functionality.}
+        \resumeItem{\textbf{Bug Fixing \& Optimization:} Diagnosed and resolved critical bugs, optimized app performance, and ensured efficient app delivery within project timelines.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -218,37 +225,32 @@
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \vspace{-7pt}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Matall App} $|$ \emph{Kotlin, XML, Firebase Auth, FCM,  Retrofit, Coroutine}  | \textbf{GitHub :} \emph{\href{https://github.com/theabhishekchandra/Matall-App}{Link}}}{February 2024}
-          \resumeItemListStart
-            \resumeItem{\textbf{E-Commerce Solution for Building Materials}: Developed an Android shopping app for purchasing construction materials such as cement, bricks, and tools, using \textbf{Kotlin } and \textbf{Android Studio} for the development environment.}
-            \resumeItem{\textbf{User-Friendly Interface: }Designed a seamless and intuitive \textbf{UI} with Material Design principles, utilizing \textbf{RecyclerView} for efficient product display and \textbf{Room Database} for local storage of product data.}
-            \resumeItem{\textbf{Payment Gateway Integration:} Implemented a secure payment system using \textbf{Retrofit }for \textbf{API} calls and Firebase for authentication, ensuring smooth and secure transactions.}
-          \resumeItemListEnd
-          
-          \vspace{-17pt}
-          
-      \resumeProjectHeading
-          {\textbf{Education App} $|$ \emph{Java, XML, Firebase Auth, Retrofit}  | \textbf{GitHub :} \emph{\href{https://github.com/theabhishekchandra/}{Link}}}{December 2023}
-          \resumeItemListStart
-            \resumeItem{\textbf{E-Learning Solution: }Designed and developed an Android application to provide \textbf{chapter notes}, \textbf{video tutorials}, and a \textbf{centralized notice board}, enhancing accessibility for students.}
-            \resumeItem{\textbf{Multi-Language Support:} Implemented language customization using \textbf{Android Resources} to allow users to access videos in their preferred language, improving inclusivity and engagement.}
-            % \resumeItem{\textbf{Push Notifications:} Integrated \textbf{Firebase Cloud Messaging (FCM) }to deliver real-time updates and announcements via a dynamic notice board.}
-            \resumeItem{\textbf{User-Friendly Interface:} Built a responsive and optimized \textbf{UI} using \textbf{Material Design} principles, ensuring seamless navigation and compatibility with \textbf{Dark Mode}.}
-          \resumeItemListEnd
-          
-          \vspace{-17pt}
-          
-          % \resumeProjectHeading
-          % {\textbf{Fingerprint Unlock System} $|$ \emph{Java, XML, HTML/CSS, JavaScript, PHP, MySQL} | \textbf{GitHub :} \emph{\href{https://github.com/theabhishekchandra/FUS_App}{Link}} }{August 2023}
-          % \resumeItemListStart
-          %   \resumeItem{\textbf{Next-Generation Authentication:} Designed and implemented a secure fingerprint-based login system using \textbf{Java}, \textbf{Android Studio}, and \textbf{PHP}, bridging Android and web technologies for seamless integration.}
-          %   \resumeItem{\textbf{Web and Android Integration:} Developed a system enabling users to unlock the website’s login page with phone-based fingerprint authentication, leveraging \textbf{HTML/CSS}, \textbf{JavaScript}, and \textbf{MySQL}.}
-          %   % \resumeItem{\textbf{Advanced Security Features}: Enhanced user authentication by incorporating fingerprint recognition, ensuring robust security and a user-friendly experience.}
-          % \resumeItemListEnd 
-    \resumeSubHeadingListEnd
+\vspace{-7pt}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{ \textcolor{linkedinblue} {Matall App}} $|$ \emph{Kotlin, Firebase, Retrofit, Coroutine, Room DB} $|$ \textbf{GitHub:} {\href{https://github.com/theabhishekchandra/Matall-App}{\textcolor{accent}{\textbf{Link}}}}}{Feb 2024}
+    \resumeItemListStart
+      \resumeItem{Built an e-commerce Android app for construction materials using \textbf{Kotlin} and \textbf{MVVM}.}
+      \resumeItem{Designed smooth UI with \textbf{Material Design}, \textbf{RecyclerView}, and offline caching using \textbf{Room}.}
+      \resumeItem{Integrated \textbf{Firebase Auth}, secure payments via \textbf{Retrofit} APIs, and \textbf{FCM} for notifications.}
+    \resumeItemListEnd
+    
+  \vspace{-16pt}
+  
+  \resumeProjectHeading
+  {\textbf{\textcolor{primary}{Kabutar App}} $|$ \emph{Kotlin, Retrofit, Firebase Auth, PHP, SQL, AI} $|$   \textbf{GitHub:} {\href{https://github.com/theabhishekchandra/Kabutar/}
+  {\textcolor{accent}{\textbf{Link}}}}}{Dec 2024}
+  \resumeItemListStart
+    \resumeItem{Developed a bulk email Android app with AI-generated cold emails for job seekers and professionals.}
+    \resumeItem{Used \textbf{Kotlin}, \textbf{Retrofit}, and \textbf{Firebase Auth} with a \textbf{PHP-MySQL} backend.}
+    \resumeItem{Added industry-specific templates and custom email personalization features.}
+    \resumeItem{Integrated AI to auto-generate cold emails tailored to users' goals and roles.}
+    \resumeItem{Support for CSV/Excel/PDF import and UI improvements.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
 \vspace{-15pt}
 
 
