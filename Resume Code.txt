@@ -186,7 +186,7 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Gram Unnati Foundation}{Jun 2024 -- Present}
+      {Four Leaf Clover Agro Pvt. Ltd.}{Jun 2024 -- Present}
       {Junior Android Developer}{Gurugram, Haryana}
       \resumeItemListStart
         \resumeItem{\textbf{Scheduled Image Upload:} Engineered an automated image upload mechanism leveraging \textbf{WorkManager} and \textbf{ConnectivityManager} to ensure reliable data synchronization during low network conditions.}
@@ -196,7 +196,7 @@
       \resumeItemListEnd
 
     \resumeSubheading
-      {Gram Unnati Foundation}{Mar 2024 -- Jun 2024}
+      {Four Leaf Clover Agro Pvt. Ltd.}{Mar 2024 -- Jun 2024}
       {Android Developer Intern}{Gurugram, Haryana}
       \resumeItemListStart
         \resumeItem{\textbf{Firebase Authentication:} Integrated \textbf{Firebase Authentication} with OTP-based phone number verification to enhance user security and authentication reliability.}
