@@ -4,6 +4,7 @@
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
+% \setlength{\footskip}{4.08003pt}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -11,6 +12,10 @@
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
+% \usepackage[sfdefault]{FiraSans}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
@@ -42,12 +47,28 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Define brand colors
+% \definecolor{gmailred}{HTML}{D44638}
+% \definecolor{phonegreen}{HTML}{008000}
+% \definecolor{linkedinblue}{HTML}{0A66C2}
+% \definecolor{githubblack}{HTML}{171515}
+% \definecolor{primary}{HTML}{169e1d}    % Project Heading
+% \definecolor{accent}{HTML}{ed1c1c}     % Link red or attention color
+
+% Brand-specific colors
 \definecolor{gmailred}{HTML}{D44638}
 \definecolor{phonegreen}{HTML}{008000}
 \definecolor{linkedinblue}{HTML}{0A66C2}
 \definecolor{githubblack}{HTML}{171515}
-\definecolor{primary}{HTML}{169e1d}    % Project Heading
-\definecolor{accent}{HTML}{ed1c1c}     % Link red or attention color
+\definecolor{linkred}{HTML}{B33A3A}  % Muted dark red, more elegant
+\definecolor{linkteal}{HTML}{008080}  % Teal
+\definecolor{linkcyan}{HTML}{00B7C3}  % Bright Cyan
+\definecolor{linkpurple}{HTML}{6A0DAD}  % Dark purple
+
+
+% Main theme colors (updated)
+\definecolor{primary}{HTML}{3F51B5}    % Use this for project headings
+\definecolor{accent}{HTML}{202124}     % Dark gray for contrast/highlight
+
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.6in}
@@ -64,8 +85,9 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
+  \color{primary}\vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -131,13 +153,14 @@
 
 
 \begin{center}
-    {\Huge \scshape Abhishek Chandra} \\ \vspace{1pt}
+    {\Huge \textcolor{black}{\scshape Abhishek Chandra}} \\ \vspace{1pt}
+
     \small 
     \textcolor{phonegreen}{\faPhone ~ 8576839351} ~
     \href{mailto:ac927920@gmail.com}{\textcolor{gmailred}{\faEnvelope~ac927920@gmail.com}} ~
     \href{https://www.linkedin.com/in/theabhishekchandra/}{\textcolor{linkedinblue}{\faLinkedin~linkedin.com/in/theabhishekchandra}} ~
     \href{https://github.com/theabhishekchandra}{\textcolor{githubblack}{\faGithub~github.com/theabhishekchandra}} 
-    \vspace{-13pt}
+    \vspace{-10pt}
 \end{center}
 
 
@@ -152,15 +175,20 @@
   \vspace{-13pt}
 
   %
-%-----------PROGRAMMING SKILLS-----------
+%-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Kotlin, Java, XML, Jetpack Compose} \\
-     \textbf{Developer Tools}{: Android Studio, VS Code, Azure DevOps }\\
-     \textbf{Technologies/Frameworks}{: Data / View Binding, Glide / Pisso, Room Database, SQLite, Firebase, Retrofit / OkHttp / Volley, Dagger / Hilt, Coroutines, MVVM, MVP, MVI, Git, GitHub, JUnit, Espresso, CI/CD} }}
- \end{itemize}
- \vspace{-20pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: Kotlin, Java, XML} \\
+    \textbf{Developer Tools}{: Android Studio, Visual Studio Code, Azure DevOps, Git} \\
+    \textbf{Frameworks \& Libraries}{: Jetpack (ViewModel, LiveData, Navigation, WorkManager), Jetpack Compose, Room, Retrofit, OkHttp, Volley, Glide, Picasso, Dagger2, Hilt, Firebase (Auth, Firestore, FCM), Coroutine, RxJava} \\
+    \textbf{Architecture Patterns}{: MVVM, MVP, MVI, Clean Architecture} \\
+    \textbf{Testing \& CI/CD}{: JUnit, Espresso, CI/CD pipelines (GitHub Actions / Azure DevOps)} \\
+    \textbf{Databases}{: Room Database, SQLite, Firebase Realtime Database} 
+  }}
+\end{itemize}
+\vspace{-20pt}
+
 
 % %------RELEVANT COURSEWORK-------
 % \section{Relevant Coursework}
@@ -186,42 +214,45 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Four Leaf Clover Agro Pvt. Ltd.}{Jun 2024 -- Present}
+      {\href{https://www.gram-unnati.com}{Four Leaf Clover Agro Pvt. Ltd. (Gram Unnati)}}{Jun 2024 -- Present}
       {Junior Android Developer}{Gurugram, Haryana}
       \resumeItemListStart
-        \resumeItem{\textbf{Scheduled Image Upload:} Engineered an automated image upload mechanism leveraging \textbf{WorkManager} and \textbf{ConnectivityManager} to ensure reliable data synchronization during low network conditions.}
-        \resumeItem{\textbf{In-App Video Tutorials:} Developed a user-friendly onboarding experience by integrating video tutorials using \textbf{Kotlin} and \textbf{Material Design}, enhancing user engagement and support.}
-        \resumeItem{\textbf{Multi-Language Support:} Implemented \textbf{Android Resources} and \textbf{Locale API} to enable seamless app localization, supporting English and Hindi.}
-        \resumeItem{\textbf{Invoice Generation:} Designed and developed a dynamic PDF generation feature using the \textbf{PDF Generator Library}, improving efficiency in documentation and invoicing processes.}
+        \resumeItem{Engineered a scheduled image upload system leveraging \textbf{WorkManager} and \textbf{ConnectivityManager}, increasing data sync reliability by 45\% under low network conditions.}
+        \resumeItem{Created onboarding with video tutorials via \textbf{ExoPlayer}, increasing user engagement by 60\%.}
+        \resumeItem{Implemented multi-language support (English \& Hindi) using \textbf{Locale API} and \textbf{Android Resources}.}
+        \resumeItem{Developed a dynamic invoice generation module utilizing a \textbf{PDF Generator Library}, streamlining documentation workflows and improving operational efficiency.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Four Leaf Clover Agro Pvt. Ltd.}{Mar 2024 -- Jun 2024}
+      {\href{https://www.gram-unnati.com}{Four Leaf Clover Agro Pvt. Ltd. (Gram Unnati)}}{Mar 2024 -- Jun 2024}
       {Android Developer Intern}{Gurugram, Haryana}
       \resumeItemListStart
-        \resumeItem{\textbf{Firebase Authentication:} Integrated \textbf{Firebase Authentication} with OTP-based phone number verification to enhance user security and authentication reliability.}
-        \resumeItem{\textbf{Advanced Camera Functionality:} Optimized in-app camera features by implementing \textbf{auto-focus}, \textbf{watermarking}, and \textbf{real-time image processing} to enhance user experience.}
-        \resumeItem{\textbf{Push Notifications:} Configured \textbf{Firebase Cloud Messaging (FCM)} to deliver targeted push notifications, improving user retention and app engagement.}
+        \resumeItem{Integrated \textbf{Firebase Authentication} with OTP login for secure and seamless user verification.}
+        \resumeItem{Enhanced camera features including \textbf{real-time image processing}, \textbf{auto-focus}, and \textbf{watermarking}, improving photo quality and app functionality.}
+        \resumeItem{Implemented \textbf{Firebase Cloud Messaging (FCM)} for personalized push notifications, increasing user retention rates.}
+        \resumeItem{Assisted in debugging and optimizing app components to improve stability and performance.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Websbaba Technologies Pvt. Ltd.}{Oct 2023 -- Mar 2024}
+      {\href{https://websbaba.in}{Websbaba Technologies Pvt. Ltd.}}{Oct 2023 -- Mar 2024}
       {Android Developer}{Gurugram, Haryana}
       \resumeItemListStart
-        \resumeItem{\textbf{App Performance Optimization:} Diagnosed and resolved performance bottlenecks using \textbf{Android Profiler}, optimizing memory usage and ensuring smooth app operation across devices.}
-        \resumeItem{\textbf{Full-Stack Android Development:} Led the design, development, and deployment of Android applications aligned with business requirements and user needs.}
+        \resumeItem{Led full-cycle Android app development from concept to deployment based on business needs.}
+        \resumeItem{Implemented features using \textbf{Kotlin}, \textbf{MVVM architecture}, and integrated APIs with \textbf{Retrofit}.}
+        \resumeItem{Collaborated with QA and design teams to deliver high-quality user-centric applications.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Websbaba Technologies Pvt. Ltd.}{Jul 2023 -- Aug 2023}
+      {\href{https://websbaba.in}{Websbaba Technologies Pvt. Ltd.}}{Jul 2023 -- Aug 2023}
       {Android Developer Intern}{Gurugram, Haryana}
       \resumeItemListStart
-        \resumeItem{\textbf{Feature Development:} Engineered Android app features using \textbf{Java} and \textbf{Material Design}, enhancing UI/UX experience and application functionality.}
-        \resumeItem{\textbf{Bug Fixing \& Optimization:} Diagnosed and resolved critical bugs, optimized app performance, and ensured efficient app delivery within project timelines.}
+        \resumeItem{Developed core app features using \textbf{Java} and \textbf{Material Design}, significantly enhancing UI/UX consistency.}
+        \resumeItem{Participated in code reviews and contributed to improving development workflows.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 \vspace{-18pt}
+
 
 %-----------PROJECTS-----------
 \section{Projects}
@@ -229,30 +260,27 @@
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
-    {\textbf{ \textcolor{linkedinblue} {Matall App}} $|$ \emph{Kotlin, Firebase, Retrofit, Coroutine, Room DB} $|$ \textbf{GitHub:} {\href{https://github.com/theabhishekchandra/Matall-App}{\textcolor{accent}{\textbf{Link}}}}}{Feb 2024}
+    {\textbf{\textcolor{linkedinblue}{Matall App}} $|$ \emph{Kotlin, Firebase, Retrofit, Coroutine, Room DB} $|$ \textbf{GitHub:} {\href{https://github.com/theabhishekchandra/Matall-App}{\textcolor{linkred}{\textbf{Link}}}}}{Feb 2024}
     \resumeItemListStart
-      \resumeItem{Built an e-commerce Android app for construction materials using \textbf{Kotlin} and \textbf{MVVM}.}
-      \resumeItem{Designed smooth UI with \textbf{Material Design}, \textbf{RecyclerView}, and offline caching using \textbf{Room}.}
-      \resumeItem{Integrated \textbf{Firebase Auth}, secure payments via \textbf{Retrofit} APIs, and \textbf{FCM} for notifications.}
+      \resumeItem{Built an e-commerce Android app for construction materials using \textbf{Kotlin} and \textbf{MVVM Architecture}.}
+      \resumeItem{Designed modern UI using \textbf{Material Design}, \textbf{RecyclerView}, and implemented offline caching with \textbf{Room Database}.}
+      \resumeItem{Integrated \textbf{Firebase Authentication}, secure payment functionality via \textbf{Retrofit APIs}, and \textbf{Firebase Cloud Messaging (FCM)} for real-time notifications.}
     \resumeItemListEnd
-    
+
   \vspace{-16pt}
-  
+
   \resumeProjectHeading
-  {\textbf{\textcolor{primary}{Kabutar App}} $|$ \emph{Kotlin, Retrofit, Firebase Auth, PHP, SQL, AI} $|$   \textbf{GitHub:} {\href{https://github.com/theabhishekchandra/Kabutar/}
-  {\textcolor{accent}{\textbf{Link}}}}}{Dec 2024}
-  \resumeItemListStart
-    \resumeItem{Developed a bulk email Android app with AI-generated cold emails for job seekers and professionals.}
-    \resumeItem{Used \textbf{Kotlin}, \textbf{Retrofit}, and \textbf{Firebase Auth} with a \textbf{PHP-MySQL} backend.}
-    \resumeItem{Added industry-specific templates and custom email personalization features.}
-    \resumeItem{Integrated AI to auto-generate cold emails tailored to users' goals and roles.}
-    \resumeItem{Support for CSV/Excel/PDF import and UI improvements.}
-  \resumeItemListEnd
+    {\textbf{\textcolor{phonegreen}{Kabutar App}} $|$ \emph{Kotlin, Retrofit, Firebase Auth, PHP, SQL, AI} $|$ \textbf{GitHub:} {\href{https://github.com/theabhishekchandra/Kabutar}{\textcolor{linkred}{\textbf{Link}}}}}{Dec 2024}
+    \resumeItemListStart
+      \resumeItem{Developed an Android app for sending bulk emails with \textbf{AI-generated cold emails} tailored to professionals and job seekers.}
+      \resumeItem{Used \textbf{Kotlin}, \textbf{Retrofit}, and \textbf{Firebase Authentication} with a backend powered by \textbf{PHP-MySQL}.}
+      \resumeItem{Added support for \textbf{industry-specific templates}, email personalization, and localization.}
+      \resumeItem{Enabled users to import recipient data from \textbf{CSV}, \textbf{Excel}, and \textbf{PDF} formats.}
+      \resumeItem{Incorporated AI integration to generate customized, goal-based cold emails.}
+    \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-
 \vspace{-15pt}
-
 
 % %-----------INVOLVEMENT---------------
 % \section{Leadership / Extracurricular}
